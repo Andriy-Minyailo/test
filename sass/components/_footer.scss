@@ -1,0 +1,211 @@
+.footer {
+    background-color: var(--hero-footer-backgroun-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer .container {
+    @include desktop {
+        display: flex;
+    }
+}
+
+.container__tablet {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 76px;
+        padding-right: 89px;
+    }
+    @include desktop {
+        display: flex;
+    }
+}
+.footer__address {
+    margin-top: 28px;
+}
+
+.address {
+    font-style: normal;
+    color: var(--primary-backgroun-color);
+}
+.address__container {
+    text-align: center; 
+    @include desktop {
+        text-align: left;
+    }
+   } 
+
+.address__list>li:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__contact {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address__list {
+    list-style: none;
+   }
+
+li .address__contact {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address__contact:hover,
+.address__contact:focus {
+    color: var(--accent-color);
+}
+
+.footer__our-social {
+    margin-top: 60px;
+    @include tablet {
+        margin-top: 0;
+    }
+    @include desktop {
+       margin-left: 70px; 
+    }
+}
+
+.our-social {
+    @include tablet {
+    padding-top: 5px;
+    }
+    @include desktop {
+        padding-top: 12px;
+    }
+}
+
+.our-social__titel {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-backgroun-color);
+    @include desktop {
+        text-align: left;
+    }
+}
+.our-social__lists {
+    justify-content: center;
+}
+.our-social__list {
+    width: 44px;
+    height: 44px;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+}
+}
+
+.our-social__link {
+    @include flexCenter();
+    width: 100%;
+    height: 100%;
+    color: var(--primary-backgroun-color);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    background-color: var(--accent-color);
+    }
+}
+
+.our-social__icon {
+    fill: currentColor;
+}
+
+.footer__subscription {
+    @include desktop {
+    margin-left: auto;
+    }
+}
+
+.subscription {
+    margin-top: 60px;
+    @include desktop {
+        margin-top: 0;
+        padding-top: 12px;
+    }
+    }
+
+.subscription__text {
+    @include font(700, 14, 1.14, null);
+    text-align: center;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--primary-backgroun-color);
+    margin-bottom: 20px;
+    @include desktop {
+        text-align: left;
+    }
+}
+.subscription__form {
+    @include desktop {
+        display: flex;
+    }
+}
+
+.subscription__input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+    color: var(--primary-backgroun-color);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+        width: 450px;
+    }
+    @include desktop {
+        width: 358px;
+        margin-bottom: 0;
+    }
+
+    &:focus-within {
+        border-color: var(--accent-color);
+    }
+    &::placeholder {
+        @include font(400, 16, 1.25, null);
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.subscription__button {
+    @include flexCenter();
+    @include font(700, 16, 1.88, 0.06em);
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    color: var(--primary-backgroun-color);
+    
+    @include desktop {
+        margin-left: 12px;
+        margin-right: 0;
+    }
+}
+
+.subscription__icon {
+    margin-left: 10px;
+}

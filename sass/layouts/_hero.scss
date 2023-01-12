@@ -1,0 +1,78 @@
+.hero {
+    max-width: 1600px;
+    height: 400px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--hero-footer-backgroun-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero_tel.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero_tel-2x.jpg);
+        }
+
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero_tablet.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/hero_tablet-2x.jpg);
+            }
+        }
+    @include desktop {
+        height: 600px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url(../images/hero_desktop.jpg);
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                            rgba(47, 48, 58, 0.4)),
+                        url(../images/hero_desktop-2x.jpg);
+            }
+        }
+
+    & .container {
+        padding: 118px 0;
+        @include desktop {
+            padding: 200px 0;
+        }
+    }
+}
+
+.hero__title {
+    @include font(900, 26, 1.61, 0.06em);
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--margin30px);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-backgroun-color);
+    @include desktop {
+        @include font(900, 44, 1.36, 0.06em);
+        max-width: 696px;
+    }
+}
+
+.hero__button {
+    @include font(700, 16, 1.88, 0.06);
+    display: inherit;
+    padding: 10px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: inherit;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--primary-backgroun-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+}

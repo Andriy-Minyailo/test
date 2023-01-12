@@ -1,0 +1,14 @@
+.logo {
+    font-family: "Raleway", "Roboto", sans-serif;
+    @include font(700, 26, 1.19, null);
+    font-style: normal;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.logo--black-color {
+    color: var(--logo-header-end-color);
+}
+
+.logo--white-color {
+    color: var(--primary-backgroun-color);
+}
